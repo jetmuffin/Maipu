@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="edu.hhu.jetmuffin.maipu.MapActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_map" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/normal_plus"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="bottom|end"
+        fab:fab_addButtonColorNormal="@color/white"
+        fab:fab_addButtonColorPressed="@color/white_pressed"
+        fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_addButtonSize="mini"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="right">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/erase_button"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/ic_delete_white_48dp"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_distance_button"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/ic_gesture_white_48dp"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locate_my_button"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/ic_location_searching_white_48dp"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locate_longitude_button"
+            fab:fab_colorNormal="@color/pink"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/ic_location_on_white_48dp"
+            fab:fab_colorPressed="@color/pink_pressed"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</android.support.design.widget.CoordinatorLayout>
